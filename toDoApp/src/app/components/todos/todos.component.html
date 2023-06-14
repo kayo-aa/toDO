@@ -1,0 +1,5 @@
+<section class="main">
+  <ul class="todo-list">
+    <app-todo *ngFor="let task of filteredTasks" [task] = "task" [isCompleted] = "task.completed"></app-todo>
+  </ul>
+</section>

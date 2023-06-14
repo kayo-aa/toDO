@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="container">
+    <h1>My Day</h1>
+    <p>All my tasks in one place</p>
+    <input
+      class="new-todo"
+      placeholder="Type something todo"
+      autofocus
+      type="text"
+      (keydown.enter)="addTask($event)"
+    />
+  </div>
+</header>

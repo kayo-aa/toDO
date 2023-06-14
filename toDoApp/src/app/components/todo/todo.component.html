@@ -1,0 +1,32 @@
+<!-- <li class="completed">
+  <div class="view">
+    <input class="toggle" type="checkbox" checked />
+    <label>Learn JavaScript</label>
+    <button class="destroy"></button>
+  </div>
+  <input class="edit" value="Learn JavaScript" />
+</li>
+<li>
+  <div class="view">
+    <input class="toggle" type="checkbox" />
+    <label>Buy an unicorn</label>
+    <button class="destroy"></button>
+  </div>
+  <input class="edit" value="Buy a unicorn" />
+</li>
+<li class="editing">
+  <div class="view">
+    <input class="toggle" type="checkbox" />
+    <label>Make dishes</label>
+    <button class="destroy"></button>
+  </div>
+  <input class="edit" value="Make dishes" />
+</li> -->
+<li [ngClass]="{'editing': showEdition, 'completed': isCompleted}">
+  <div class="view">
+    <input (click)="toggleCompleted()" class="toggle" type="checkbox" [checked]="isCompleted"/>
+    <label (click)="toggleEdition(editInput)"> {{task.title}} </label>
+    <button class="destroy" (click)="deleteTask()"></button>
+  </div>
+  <input (keydown.enter)="editTask($event); " class="edit" value="{{task.title}}" #editInput/>
+</li>

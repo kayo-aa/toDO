@@ -1,0 +1,6 @@
+<span class="todo-count">
+  <strong>{{counter}}</strong>
+  <ng-container *ngIf="counter == 1; then singular; else plural"></ng-container>
+</span>
+<ng-template #singular> item left</ng-template>
+<ng-template #plural> items left</ng-template>
